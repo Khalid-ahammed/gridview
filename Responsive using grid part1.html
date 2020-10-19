@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Web Designing Using Grid View</title>
+    <style>
+        *{
+            box-sizing:border-box;
+            margin:0;
+            padding:0;
+        }
+        .grid-container{
+            
+        }
+        header{
+            background-color:orange;
+            display:flex;
+            justify-content: center;
+            align-items:center;
+            padding:20px;
+        }
+     
+        .menu{
+            background-color:cadetblue;
+           
+        }
+        .menu > a{
+            text-decoration:none;
+            color:white;
+            padding:15px 0;
+            text-align:center;
+            display:block;
+            font-size:20px;
+        }
+        
+        .menu > a:hover{
+            background-color:purple;
+            border-radius:20px;
+            color:white;
+        }
+        .main{
+            background-color:rgb(39, 214, 214);
+            padding:10px;
+        }
+        .main p{
+            padding:20px;
+        }
+        .aside{
+            background-color:darkcyan;
+            text-align:center;
+            padding:5px;
+        }
+        .aside p{
+            padding:15px;
+        }
+       .mid-row::after{
+           content:'';
+           clear:both;
+           display:table;
+       }
+        footer{
+            display:flex;
+            background-color:black;
+            color:white;
+            justify-content:center;
+            align-items:center;
+            padding:21px;
+        }
+        [class*="col-"]{
+            width:100%;
+        }
+
+
+        /*for tablet */
+        @media screen and (min-width:700px){
+
+            [class*="col-s-"]{
+             float:left;
+         }
+ 
+            
+        .col-s-1{width:8.33%;}
+        .col-s-2{width:16.67%;}
+        .col-s-3{width:25%;}
+        .col-s-4{width:33.32%;}
+        .col-s-5{width:41.65%;}
+        .col-s-6{width:50%;}
+        .col-s-7{width:58.32%;}
+        .col-s-8{width:66.64%;}
+        .col-s-9{width:75%;}
+        .col-s-10{width:83.30%;}
+        .col-s-11{width:91.64%;}
+        .col-s-12{width:100%;}
+        }
+
+        
+        /*for Desktop */
+        @media screen and (min-width:900px){
+         
+         [class*="col-"]{
+             float:left;
+         }
+ 
+         .col-1{width:8.33%;}
+         .col-2{width:16.67%;}
+         .col-3{width:24.99%;}
+         .col-4{width:33.32%;}
+         .col-5{width:41.65%;}
+         .col-6{width:50%;}
+         .col-7{width:58.32%;}
+         .col-8{width:66.64%;}
+         .col-9{width:74.97%;}
+         .col-10{width:83.30%;}
+         .col-11{width:91.64%;}
+         .col-12{width:100%;}
+       
+         }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        
+        <header class="col-12">
+            <h1>Khalid Ahammed</h1>
+        </header>
+        
+
+        <div class="mid-row col-12">
+            <div class="menu col-2 col-s-3">
+                <a href="#">Home</a>
+                <a href="#">Contact</a>
+                <a href="#">Tutorial</a>
+            </div>
+            
+            <div class="main col-7 col-s-9">
+                <h1 style="text-align:center;">I am a Web Designer</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus quae possimus ipsum hic rerum libero unde quidem non explicabo qui.</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis quod distinctio quia aperiam adipisci sunt fugit vero fuga ad architecto asperiores ut fugiat totam consequuntur soluta, ea exercitationem! Voluptate debitis maxime voluptatem rerum qui delectus cum alias pariatur, reprehenderit odit quia minima et eos perferendis praesentium ex dolorum, optio nostrum sint amet ipsum fugiat iure. Laudantium laboriosam id vel eaque doloribus provident maxime dolorem, quis deleniti? Eaque, veniam similique cupiditate alias omnis voluptatibus aspernatur. Aut omnis, pariatur quasi ipsa, architecto enim saepe fuga vel id explicabo quae iure, animi iusto quisquam rem perferendis reiciendis veritatis. Error distinctio dolore exercitationem, a voluptas minus ratione labore sed provident harum eius corrupti sapiente quis sint, odio esse! Fuga iste maiores magni et! Expedita.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis deserunt libero quis beatae dolore. Culpa voluptatem nostrum ab earum aliquid! Odit necessitatibus porro obcaecati, soluta quam mollitia blanditiis nulla temporibus alias quos quo vero, pariatur dolorum numquam illum? Quasi et corrupti culpa beatae magnam dolorum vel cupiditate esse non! Doloremque vero libero a nam autem suscipit, nostrum corrupti, ipsum quisquam hic eum necessitatibus fugiat ullam possimus explicabo. Rem alias quo ut, modi perferendis animi et soluta labore. Deleniti odit sed iusto ea! Quos distinctio iste debitis, dolores odio nesciunt quam cupiditate accusantium, provident a quis velit dolore deserunt unde ipsum quidem ipsam sunt facilis consequatur ducimus alias soluta? Quis est sequi repellat deserunt nisi nihil debitis quam, voluptas, adipisci nemo sunt natus magnam illo fugit.</p>
+            </div>
+
+            <div class="aside col-3 col-s-12">
+                <h1>What I love</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, maxime.</p>
+                <h1>What I do</h1>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora, esse quisquam.</p>
+                <h1>What I don't love</h1>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. A assumenda veniam, quas reprehenderit saepe enim.</p>
+                <h1>What I don't do</h1>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut dignissimos praesentium iusto.</p>
+            </div>
+        </div>
+        
+        <footer class="col-12">
+            <span>&copy; Study With Khalid Developed By Khalid ahammed</span>
+        </footer>
+    </div>
+</body>
+</html>
